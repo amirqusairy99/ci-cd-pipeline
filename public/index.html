@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sign in</title>
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <main>
+    <section id="auth-view" hidden>
+      <h1 id="title">Sign in</h1>
+      <form id="auth-form" novalidate>
+        <label for="email">Email</label>
+        <input id="email" type="email" autocomplete="email" required>
+
+        <label for="password">Password</label>
+        <input id="password" type="password" autocomplete="current-password" minlength="8" required>
+
+        <p id="error" role="alert" hidden></p>
+
+        <button id="submit" type="submit">Sign in</button>
+      </form>
+      <p class="switch">
+        <span id="switch-prompt">No account yet?</span>
+        <button id="switch" type="button" class="link">Create one</button>
+      </p>
+    </section>
+
+    <section id="account-view" hidden>
+      <h1>You're signed in</h1>
+      <p>Signed in as <strong id="whoami"></strong></p>
+      <button id="logout" type="button">Sign out</button>
+    </section>
+  </main>
+  <script type="module" src="/app.js"></script>
+</body>
+</html>
